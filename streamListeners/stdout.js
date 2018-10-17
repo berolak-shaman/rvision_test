@@ -54,7 +54,7 @@ class OutputParser extends Transform {
         this.before.length = 0
         return this.before.push(str.replace(/[\b]/ug, ''))
       }
-      return this.before.push(str)
+      return str.split().forEach(char => this.before.push(char))
     }
   }
 }
